@@ -1,0 +1,40 @@
+<h2>heroes works!</h2>
+<p>{{hero.name | uppercase}}</p>
+
+<p>{{hero.id}}</p>
+
+<div>
+    <label for="name">enter name:</label>
+    <input id="name" [(ngModel)]="hero.name" placeholder="name">
+
+</div>
+
+<div>
+    <ul *ngFor="let her of heroes">
+
+        <li>{{her.id}}
+
+            <button (click)="updateid(her.id)">updateid</button>
+
+        </li>
+        <li>{{her.name}}</li>
+    </ul>
+</div>
+
+
+<li *ngFor="let hero of heroes">
+    <button type="button" (click)="onSelect(hero)">Onselect</button>
+</li>
+
+<div *ngIf="selectedHero">
+    <h2>{{selectedHero.name | uppercase}} Details</h2>
+    <div>id: {{selectedHero.id}}</div>
+    <div>
+      <label for="hero-name">Hero name: </label>
+      <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
+    </div>
+
+</div>
+
+<button [class.selected]="hero === selectedHero" type="button" (click)="onSelect(hero)">
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
