@@ -37,4 +37,14 @@
 </div>
 
 <button [class.selected]="hero === selectedHero" type="button" (click)="onSelect(hero)">
+    <p>button click is in parent component</p>
 <app-hero-detail [hero]="selectedHero"></app-hero-detail>
+<p>child component uses property to pass data in [hero], hero is class , so it exists in child comonent,
+    we called @Input() hero?:Hero;(child ts)
+
+    so hero is object that parent put data in. hero here is the child input, 
+    so child detail html use {{hero}} in *ngif="hero" to see if hero object has data 
+</p>
+
+
+ 

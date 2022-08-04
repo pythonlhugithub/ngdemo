@@ -12,6 +12,10 @@ import { HeroesComponent } from './heroes/heroes.component';
 
 import { FormsModule } from '@angular/forms';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { MessageComponent } from './message/message.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ProductComponent } from './product/product.component';
+import { ContactComponent } from './contact/contact.component';
  
 @NgModule({
   declarations: [
@@ -21,6 +25,10 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
     MaincontentComponent,
     HeroesComponent,
     HeroDetailComponent,
+    MessageComponent,
+    DashboardComponent,
+    ProductComponent,
+    ContactComponent,
 
   ],
   imports: [
