@@ -16,7 +16,11 @@ import { MessageComponent } from './message/message.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProductComponent } from './product/product.component';
 import { ContactComponent } from './contact/contact.component';
- 
+
+import { HttpClientModule } from '@angular/common/http';
+
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,14 +33,14 @@ import { ContactComponent } from './contact/contact.component';
     DashboardComponent,
     ProductComponent,
     ContactComponent,
-
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     routing,
     FormsModule,
-
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
